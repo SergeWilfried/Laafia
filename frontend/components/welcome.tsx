@@ -147,7 +147,7 @@ export const Welcome = ({
                 <p className="text-xs font-semibold tracking-[0.3em] text-sky-300/80 uppercase">
                   Aperçu de session
                 </p>
-                <h2 className="mt-2 text-2xl font-semibold">Environnement de l'agent</h2>
+                <h2 className="mt-2 text-2xl font-semibold">Environnement de l&apos;agent</h2>
                 <p className="mt-2 text-sm text-slate-300">
                   Votre espace de travail LiveKit est prêt. Lancez la consultation pour commencer la
                   diffusion audio et la collecte de notes structurées instantanément.
@@ -161,7 +161,7 @@ export const Welcome = ({
                       <span className="absolute inline-flex size-2 animate-ping rounded-full bg-emerald-300/70" />
                       <span className="inline-flex size-2 rounded-full bg-emerald-300" />
                     </span>
-                    Lien de l'agent
+                    Lien de l&apos;agent
                   </dt>
                   <dd className="text-xs tracking-[0.2em] text-emerald-200 uppercase">Connecté</dd>
                 </div>
@@ -184,9 +184,9 @@ export const Welcome = ({
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-slate-300">
                 <p className="font-semibold tracking-[0.3em] text-slate-200/80 uppercase">Aperçu</p>
                 <p className="mt-2 leading-relaxed text-slate-300">
-                  "Le patient signale une oppression thoracique intermittente lors de la montée des
-                  escaliers. Recommandation d'un test d'effort et d'un suivi dans deux semaines.
-                  Note signalée pour examen cardiologique."
+                  Le patient signale une oppression thoracique intermittente lors de la montée des
+                  escaliers. Recommandation &apos;un test d&apos;effort et d&apos;un suivi dans deux
+                  semaines. Note signalée pour examen cardiologique.
                 </p>
               </div>
             </div>
@@ -197,7 +197,7 @@ export const Welcome = ({
       <footer className="mx-auto mt-10 w-full max-w-5xl text-sm text-slate-500 select-none dark:text-slate-300">
         <p className="leading-relaxed">
           Cet assistant transcrit chaque consultation, rédige des notes médicales de style SOAP et
-          conserve une piste d'audit sécurisée pour les flux de travail DSE en aval.
+          conserve une piste d&apos;audit sécurisée pour les flux de travail DSE en aval.
         </p>
       </footer>
     </div>
