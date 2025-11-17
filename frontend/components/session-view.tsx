@@ -38,11 +38,11 @@ export const SessionView = ({
         if (!isAgentAvailable(agentState)) {
           const reason =
             agentState === 'connecting'
-              ? 'Agent did not join the room. '
-              : 'Agent connected but did not complete initializing. ';
+              ? "L'agent n'a pas rejoint la salle. "
+              : "L'agent s'est connecté mais n'a pas terminé l'initialisation. ";
 
           toastAlert({
-            title: 'Session ended',
+            title: 'Session terminée',
             description: (
               <p className="w-full">
                 {reason}
@@ -52,7 +52,7 @@ export const SessionView = ({
                   href="https://docs.livekit.io/agents/start/voice-ai/"
                   className="whitespace-nowrap underline"
                 >
-                  See quickstart guide
+                  Voir le guide de démarrage rapide
                 </a>
                 .
               </p>
@@ -77,31 +77,31 @@ export const SessionView = ({
     >
   > = {
     connecting: {
-      label: 'Connecting',
+      label: 'Connexion',
       badge:
         'bg-amber-100 text-amber-700 ring-1 ring-white/60 dark:bg-amber-400/20 dark:text-amber-200 dark:ring-amber-200/20',
       dot: 'bg-amber-400',
     },
     listening: {
-      label: 'Listening',
+      label: 'Écoute',
       badge:
         'bg-emerald-100 text-emerald-700 ring-1 ring-white/60 dark:bg-emerald-500/20 dark:text-emerald-200 dark:ring-emerald-400/20',
       dot: 'bg-emerald-400',
     },
     thinking: {
-      label: 'Processing',
+      label: 'Traitement',
       badge:
         'bg-sky-100 text-sky-700 ring-1 ring-white/60 dark:bg-sky-500/20 dark:text-sky-200 dark:ring-sky-400/20',
       dot: 'bg-sky-400',
     },
     speaking: {
-      label: 'Responding',
+      label: 'Réponse',
       badge:
         'bg-indigo-100 text-indigo-700 ring-1 ring-white/60 dark:bg-indigo-500/20 dark:text-indigo-200 dark:ring-indigo-400/20',
       dot: 'bg-indigo-400',
     },
     disconnected: {
-      label: 'Agent offline',
+      label: 'Agent hors ligne',
       badge:
         'bg-slate-200 text-slate-600 ring-1 ring-white/60 dark:bg-slate-700/50 dark:text-slate-200 dark:ring-slate-600/30',
       dot: 'bg-slate-500',
@@ -109,7 +109,7 @@ export const SessionView = ({
   };
 
   const agentStatus = agentStateTokens[agentState] || {
-    label: 'Standby',
+    label: 'En attente',
     badge:
       'bg-slate-200 text-slate-600 ring-1 ring-white/60 dark:bg-slate-700/50 dark:text-slate-200 dark:ring-slate-600/30',
     dot: 'bg-slate-500',
@@ -141,13 +141,13 @@ export const SessionView = ({
 
                 <div>
                   <p className="text-xs font-semibold tracking-[0.3em] text-slate-500 uppercase dark:text-slate-300">
-                    Live session overview
+                    Aperçu de session en direct
                   </p>
                   <p className="mt-2 text-lg font-semibold text-slate-900 dark:text-white">
-                    {appConfig.pageTitle ?? 'Medical Note Taking Assistant'}
+                    {appConfig.pageTitle ?? 'Assistant de Prise de Notes Médicales'}
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-300">
-                    Secure WebRTC session powered by LiveKit Voice AI
+                    Session WebRTC sécurisée propulsée par LiveKit Voice AI
                   </p>
                 </div>
               </div>
@@ -163,7 +163,7 @@ export const SessionView = ({
                   }`}
                   aria-hidden="true"
                 />
-                {sessionStarted ? 'Session live' : 'Awaiting start'}
+                {sessionStarted ? 'Session en direct' : 'En attente de démarrage'}
               </span>
               <span
                 className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium tracking-[0.2em] uppercase ${agentStatus.badge}`}
@@ -173,7 +173,7 @@ export const SessionView = ({
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium tracking-[0.2em] text-slate-600 uppercase ring-1 ring-white/60 dark:bg-slate-800/60 dark:text-slate-200 dark:ring-slate-700/50">
                 <span className="size-2 rounded-full bg-sky-400" aria-hidden="true" />
-                Encrypted audio
+                Audio crypté
               </span>
             </div>
           </header>

@@ -65,7 +65,10 @@ export function DeviceSelect({
     <Select value={activeDeviceId} onValueChange={setActiveMediaDevice}>
       <SelectTrigger className={cn(selectVariants({ size }), props.className)}>
         {size !== 'sm' && (
-          <SelectValue className="font-mono text-sm" placeholder={`Select a ${kind}`} />
+          <SelectValue
+            className="font-mono text-sm"
+            placeholder={`Sélectionner ${kind === 'audioinput' ? 'un microphone' : kind === 'videoinput' ? 'une caméra' : 'un appareil'}`}
+          />
         )}
       </SelectTrigger>
       <SelectContent>

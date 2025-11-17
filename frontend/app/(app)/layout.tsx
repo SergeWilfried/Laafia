@@ -26,7 +26,7 @@ export default async function AppLayout({ children }: AppLayoutProps) {
           />
         </a>
         <span className="text-foreground font-mono text-xs font-bold tracking-wider uppercase">
-          Built with{' '}
+          Créé avec{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"

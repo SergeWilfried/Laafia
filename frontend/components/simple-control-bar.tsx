@@ -20,13 +20,13 @@ export const SimpleControlBar = () => {
     <div className="flex w-full flex-wrap items-center justify-center gap-4 md:justify-between">
       <div className="hidden min-w-[200px] flex-col text-left md:flex">
         <span className="text-[0.65rem] font-semibold tracking-[0.3em] text-slate-500 uppercase dark:text-slate-300">
-          Voice channel
+          Canal vocal
         </span>
         <span className="mt-1 text-sm font-medium text-slate-700 dark:text-slate-200">
-          {micEnabled ? 'Microphone live' : 'Microphone muted'}
+          {micEnabled ? 'Microphone actif' : 'Microphone désactivé'}
         </span>
         <span className="text-xs text-slate-500 dark:text-slate-400">
-          Toggle to control the clinician-side audio feed.
+          Basculer pour contrôler le flux audio du côté clinicien.
         </span>
       </div>
 
@@ -45,7 +45,7 @@ export const SimpleControlBar = () => {
           ) : (
             <MicrophoneSlashIcon size={26} className="transition-transform group-active:scale-95" />
           )}
-          <span className="sr-only">Toggle microphone</span>
+          <span className="sr-only">Basculer le microphone</span>
         </Button>
 
         <Button
@@ -54,8 +54,8 @@ export const SimpleControlBar = () => {
           className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-rose-500 via-rose-600 to-red-600 px-6 py-3 text-base font-semibold text-white normal-case shadow-lg shadow-rose-500/30 transition hover:-translate-y-0.5 hover:from-rose-500/90 hover:via-rose-600/90 hover:to-red-600/90 focus-visible:ring-rose-500/40"
         >
           <PhoneDisconnectIcon size={22} />
-          <span className="hidden sm:inline">End Consultation</span>
-          <span className="sm:hidden">Leave</span>
+          <span className="hidden sm:inline">Terminer la consultation</span>
+          <span className="sm:hidden">Quitter</span>
         </Button>
       </div>
     </div>

@@ -96,7 +96,7 @@ export function AgentControlBar({
 
   return (
     <div
-      aria-label="Voice assistant controls"
+      aria-label="Contrôles de l'assistant vocal"
       className={cn(
         'bg-background border-bg2 dark:border-separator1 flex flex-col rounded-[31px] border p-3 drop-shadow-md/3',
         className
@@ -206,7 +206,7 @@ export function AgentControlBar({
           {visibleControls.chat && (
             <Toggle
               variant="secondary"
-              aria-label="Toggle chat"
+              aria-label="Basculer le chat"
               pressed={chatOpen}
               onPressedChange={setChatOpen}
               disabled={!isAgentAvailable}
@@ -224,8 +224,8 @@ export function AgentControlBar({
             className="font-mono"
           >
             <PhoneDisconnectIcon weight="bold" />
-            <span className="hidden md:inline">END CALL</span>
-            <span className="inline md:hidden">END</span>
+            <span className="hidden md:inline">TERMINER L'APPEL</span>
+            <span className="inline md:hidden">FIN</span>
           </Button>
         )}
       </div>

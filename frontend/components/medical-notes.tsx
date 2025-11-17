@@ -32,12 +32,12 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
           if (payload.notes) {
             setNotes(payload.notes);
           }
-          return 'Success: Notes received';
+          return 'Succès : Notes reçues';
         } else {
-          return 'Error: Invalid notes data format';
+          return 'Erreur : Format de données de notes invalide';
         }
       } catch (error) {
-        return 'Error: ' + (error instanceof Error ? error.message : String(error));
+        return 'Erreur : ' + (error instanceof Error ? error.message : String(error));
       }
     };
 
@@ -50,12 +50,12 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
         if (payload && payload.transcription) {
           // Just replace with the new transcription
           setRecentTranscription(payload.transcription);
-          return 'Success: Transcription received';
+          return 'Succès : Transcription reçue';
         } else {
-          return 'Error: Invalid transcription data format';
+          return 'Erreur : Format de données de transcription invalide';
         }
       } catch (error) {
-        return 'Error: ' + (error instanceof Error ? error.message : String(error));
+        return 'Erreur : ' + (error instanceof Error ? error.message : String(error));
       }
     };
 
@@ -68,14 +68,14 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
         if (payload && payload.diagnosis) {
           setDiagnosis(payload.diagnosis);
           setIsLoadingDiagnosis(false);
-          return 'Success: Diagnosis received';
+          return 'Succès : Diagnostic reçu';
         } else {
           setIsLoadingDiagnosis(false);
-          return 'Error: Invalid diagnosis data format';
+          return 'Erreur : Format de données de diagnostic invalide';
         }
       } catch (error) {
         setIsLoadingDiagnosis(false);
-        return 'Error: ' + (error instanceof Error ? error.message : String(error));
+        return 'Erreur : ' + (error instanceof Error ? error.message : String(error));
       }
     };
 
@@ -117,12 +117,13 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
         // which will update the diagnosis state
       } else {
         setIsLoadingDiagnosis(false);
-        setDiagnosis('No agent connected to process diagnosis request.');
+        setDiagnosis('Aucun agent connecté pour traiter la demande de diagnostic.');
       }
     } catch (error) {
       setIsLoadingDiagnosis(false);
       setDiagnosis(
-        'Error requesting diagnosis: ' + (error instanceof Error ? error.message : String(error))
+        'Erreur lors de la demande de diagnostic : ' +
+          (error instanceof Error ? error.message : String(error))
       );
     }
   };
@@ -146,9 +147,9 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
     return notes.trim().split(/\s+/).filter(Boolean).length;
   }, [notes]);
 
-  const transcriptStatus = recentTranscription ? 'Streaming live' : 'Standing by';
+  const transcriptStatus = recentTranscription ? 'Diffusion en direct' : 'En attente';
 
-  const diagnoseButtonLabel = isLoadingDiagnosis ? 'Processing…' : 'Diagnose';
+  const diagnoseButtonLabel = isLoadingDiagnosis ? 'Traitement en cours…' : 'Diagnostiquer';
 
   return (
     <div className={containerClasses}>
@@ -157,18 +158,18 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <span className="text-xs font-semibold tracking-[0.3em] text-sky-700 uppercase dark:text-sky-200">
-                Recent transcription
+                Transcription récente
               </span>
               <p className="mt-1 text-sm text-slate-500 dark:text-slate-300">{transcriptStatus}</p>
             </div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-slate-600 shadow-sm ring-1 ring-white/80 dark:bg-slate-800/60 dark:text-slate-200 dark:ring-slate-700/50">
               <span className="size-2 rounded-full bg-sky-400" aria-hidden="true" />
-              Auto-sync
+              Synchro auto
             </span>
           </div>
 
           <div className="mt-4 min-h-[4.5rem] rounded-2xl border border-white/80 bg-white/80 px-4 py-3 font-mono text-sm leading-relaxed text-slate-700 shadow-sm ring-1 ring-white/70 backdrop-blur dark:border-slate-700/50 dark:bg-slate-900/60 dark:text-slate-100 dark:ring-slate-700/40">
-            {recentTranscription || 'Waiting for transcription…'}
+            {recentTranscription || 'En attente de transcription…'}
           </div>
         </div>
 
@@ -176,20 +177,20 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200/70 px-6 py-5 dark:border-slate-700/60">
             <div>
               <span className="text-xs font-semibold tracking-[0.3em] text-slate-500 uppercase dark:text-slate-300">
-                Structured medical notes
+                Notes médicales structurées
               </span>
               <p className="mt-1 text-sm text-slate-500 dark:text-slate-300">
-                Synced in real time as the consultation progresses
+                Synchronisées en temps réel au fur et à mesure de la consultation
               </p>
             </div>
             <div className="flex items-center gap-3 text-xs font-medium text-slate-500 dark:text-slate-300">
               <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 ring-1 ring-white/80 dark:bg-slate-800/60 dark:ring-slate-700/50">
                 <span className="size-2 rounded-full bg-emerald-400" aria-hidden="true" />
-                {noteWordCount} words
+                {noteWordCount} mots
               </span>
               <span className="hidden items-center gap-2 rounded-full bg-slate-100 px-3 py-1 ring-1 ring-white/80 md:inline-flex dark:bg-slate-800/60 dark:ring-slate-700/50">
                 <span className="size-2 rounded-full bg-indigo-400" aria-hidden="true" />
-                Markdown enabled
+                Markdown activé
               </span>
             </div>
           </div>
@@ -275,7 +276,7 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
                   </ReactMarkdown>
                 ) : (
                   <p className="text-sm text-slate-400 italic dark:text-slate-500">
-                    Notes will populate automatically once the consultation begins.
+                    Les notes seront remplies automatiquement une fois la consultation commencée.
                   </p>
                 )}
               </motion.div>
@@ -288,10 +289,10 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
         <div className="flex flex-wrap items-start justify-between gap-4 border-b border-slate-200/70 pb-5 dark:border-slate-700/60">
           <div>
             <span className="text-xs font-semibold tracking-[0.3em] text-slate-500 uppercase dark:text-slate-300">
-              Diagnosis assistant
+              Assistant de diagnostic
             </span>
             <p className="mt-2 text-sm text-slate-500 dark:text-slate-300">
-              Request a draft differential without leaving the consultation.
+              Demandez un diagnostic différentiel sans quitter la consultation.
             </p>
           </div>
           <Button
@@ -307,11 +308,13 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
         <div className="mt-5 space-y-5 text-xs text-slate-500 dark:text-slate-400">
           <div className="flex items-center gap-2">
             <span className="size-2 rounded-full bg-emerald-400" aria-hidden="true" />
-            LiveKit agent channel ready
+            Canal de l'agent LiveKit prêt
           </div>
           <div className="flex items-center gap-2">
             <span className="size-2 rounded-full bg-slate-400" aria-hidden="true" />
-            {notes ? 'Notes synced • Prompt context available' : 'Awaiting notes to build context'}
+            {notes
+              ? 'Notes synchronisées • Contexte disponible'
+              : 'En attente des notes pour construire le contexte'}
           </div>
         </div>
 
@@ -327,7 +330,7 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
             >
               {isLoadingDiagnosis ? (
                 <p className="text-sm text-slate-400 italic dark:text-slate-500">
-                  Analyzing notes for potential diagnoses…
+                  Analyse des notes pour les diagnostics potentiels…
                 </p>
               ) : diagnosis ? (
                 <ReactMarkdown
@@ -400,8 +403,8 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
                 </ReactMarkdown>
               ) : (
                 <p className="text-sm text-slate-500 dark:text-slate-400">
-                  Click “Diagnose” once notes are ready to generate differential summaries for quick
-                  review.
+                  Cliquez sur « Diagnostiquer » une fois les notes prêtes pour générer des résumés
+                  différentiels pour une révision rapide.
                 </p>
               )}
             </motion.div>

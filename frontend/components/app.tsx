@@ -30,7 +30,7 @@ export function App({ appConfig }: AppProps) {
     };
     const onMediaDevicesError = (error: Error) => {
       toastAlert({
-        title: 'Encountered an error with your media devices',
+        title: 'Une erreur est survenue avec vos périphériques média',
         description: `${error.name}: ${error.message}`,
       });
     };
@@ -63,7 +63,7 @@ export function App({ appConfig }: AppProps) {
         }
 
         toastAlert({
-          title: 'There was an error connecting to the agent',
+          title: "Une erreur est survenue lors de la connexion à l'agent",
           description: `${error.name}: ${error.message}`,
         });
       });
@@ -90,7 +90,7 @@ export function App({ appConfig }: AppProps) {
 
       <RoomContext.Provider value={room}>
         <RoomAudioRenderer />
-        <StartAudio label="Start Audio" />
+        <StartAudio label="Démarrer l'audio" />
         {/* --- */}
         <MotionSessionView
           key="session-view"

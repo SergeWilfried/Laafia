@@ -39,14 +39,14 @@ export const Welcome = ({
                 PulseNote AI
               </p>
               <p className="mt-1 text-lg font-semibold text-slate-800 dark:text-white">
-                Clinical documentation without the busywork
+                Documentation clinique sans les tâches administratives
               </p>
             </div>
           </div>
 
           <div className="hidden shrink-0 items-center gap-2 rounded-full border border-white/80 bg-white/70 px-4 py-2 text-sm font-medium text-slate-600 shadow-lg backdrop-blur md:flex dark:border-slate-700/60 dark:bg-slate-900/60 dark:text-slate-200">
             <span className="inline-flex size-2 rounded-full bg-emerald-400" aria-hidden="true" />
-            HIPAA-ready infrastructure
+            Infrastructure conforme HIPAA
           </div>
         </div>
       </header>
@@ -55,14 +55,14 @@ export const Welcome = ({
         <div className="grid gap-10 overflow-hidden rounded-[2.75rem] border border-white/70 bg-white/80 p-8 shadow-[0_40px_120px_-60px_rgba(15,23,42,0.75)] ring-1 ring-black/5 backdrop-blur-xl md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] md:p-12 dark:border-slate-700/60 dark:bg-slate-900/75 dark:ring-white/10">
           <div className="flex flex-col justify-center gap-6">
             <span className="inline-flex items-center gap-2 self-start rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold tracking-widest text-sky-700 uppercase ring-1 ring-sky-100 dark:bg-sky-500/10 dark:text-sky-200 dark:ring-sky-500/30">
-              Live consultation workspace
+              Espace de consultation en direct
             </span>
             <h1 className="text-3xl leading-tight font-semibold text-slate-900 sm:text-4xl dark:text-white">
-              Medical Note Taking Assistant
+              Assistant de Prise de Notes Médicales
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300">
-              Seamlessly capture conversations, generate structured notes, and hand off detailed
-              summaries before the patient leaves the room.
+              Capturez facilement les conversations, générez des notes structurées et remettez des
+              résumés détaillés avant que le patient ne quitte la salle.
             </p>
 
             <ul className="grid gap-4 text-base text-slate-700 dark:text-slate-200">
@@ -78,7 +78,7 @@ export const Welcome = ({
                     <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                <span>Real-time transcription with speaker-aware context.</span>
+                <span>Transcription en temps réel avec contexte du locuteur.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex size-7 items-center justify-center rounded-full bg-sky-100 text-sky-600 shadow-sm dark:bg-sky-500/20 dark:text-sky-200">
@@ -92,7 +92,9 @@ export const Welcome = ({
                     <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                <span>AI-curated SOAP notes aligned with clinical best practices.</span>
+                <span>
+                  Notes SOAP générées par IA conformes aux meilleures pratiques cliniques.
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 flex size-7 items-center justify-center rounded-full bg-sky-100 text-sky-600 shadow-sm dark:bg-sky-500/20 dark:text-sky-200">
@@ -106,7 +108,9 @@ export const Welcome = ({
                     <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                <span>One-click diagnosis request powered by LiveKit voice agents.</span>
+                <span>
+                  Demande de diagnostic en un clic propulsée par les agents vocaux LiveKit.
+                </span>
               </li>
             </ul>
 
@@ -141,12 +145,12 @@ export const Welcome = ({
             <div className="relative flex flex-col gap-6">
               <div>
                 <p className="text-xs font-semibold tracking-[0.3em] text-sky-300/80 uppercase">
-                  Session snapshot
+                  Aperçu de session
                 </p>
-                <h2 className="mt-2 text-2xl font-semibold">Agent environment</h2>
+                <h2 className="mt-2 text-2xl font-semibold">Environnement de l'agent</h2>
                 <p className="mt-2 text-sm text-slate-300">
-                  Your LiveKit workspace is ready. Launch the consultation to begin streaming audio
-                  and collecting structured notes instantly.
+                  Votre espace de travail LiveKit est prêt. Lancez la consultation pour commencer la
+                  diffusion audio et la collecte de notes structurées instantanément.
                 </p>
               </div>
 
@@ -157,19 +161,19 @@ export const Welcome = ({
                       <span className="absolute inline-flex size-2 animate-ping rounded-full bg-emerald-300/70" />
                       <span className="inline-flex size-2 rounded-full bg-emerald-300" />
                     </span>
-                    Agent link
+                    Lien de l'agent
                   </dt>
-                  <dd className="text-xs tracking-[0.2em] text-emerald-200 uppercase">Connected</dd>
+                  <dd className="text-xs tracking-[0.2em] text-emerald-200 uppercase">Connecté</dd>
                 </div>
                 <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-                  <dt className="font-medium text-slate-200">STT model</dt>
+                  <dt className="font-medium text-slate-200">Modèle STT</dt>
                   <dd className="flex items-center gap-2 text-xs tracking-[0.2em] text-sky-200 uppercase">
                     <span className="size-2 rounded-full bg-sky-300" aria-hidden="true" />
                     Deepgram Flux
                   </dd>
                 </div>
                 <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-                  <dt className="font-medium text-slate-200">LLM model</dt>
+                  <dt className="font-medium text-slate-200">Modèle LLM</dt>
                   <dd className="flex items-center gap-2 text-xs tracking-[0.2em] text-indigo-200 uppercase">
                     <span className="size-2 rounded-full bg-indigo-300" aria-hidden="true" />
                     GPT-OSS-120B
@@ -178,12 +182,11 @@ export const Welcome = ({
               </dl>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-slate-300">
-                <p className="font-semibold tracking-[0.3em] text-slate-200/80 uppercase">
-                  Preview
-                </p>
+                <p className="font-semibold tracking-[0.3em] text-slate-200/80 uppercase">Aperçu</p>
                 <p className="mt-2 leading-relaxed text-slate-300">
-                  “Patient reports intermittent chest tightness when climbing stairs. Recommending a
-                  stress test and follow-up in two weeks. Note flagged for cardiology review.”
+                  "Le patient signale une oppression thoracique intermittente lors de la montée des
+                  escaliers. Recommandation d'un test d'effort et d'un suivi dans deux semaines.
+                  Note signalée pour examen cardiologique."
                 </p>
               </div>
             </div>
@@ -193,8 +196,8 @@ export const Welcome = ({
 
       <footer className="mx-auto mt-10 w-full max-w-5xl text-sm text-slate-500 select-none dark:text-slate-300">
         <p className="leading-relaxed">
-          This assistant transcribes each consultation, drafts SOAP-style medical notes, and keeps a
-          secure audit trail for downstream EHR workflows.
+          Cet assistant transcrit chaque consultation, rédige des notes médicales de style SOAP et
+          conserve une piste d'audit sécurisée pour les flux de travail DSE en aval.
         </p>
       </footer>
     </div>
