@@ -268,7 +268,15 @@ class NoteTakingAssistant:
             return f"Error generating diagnosis: {str(e)}"
 
 async def entrypoint(ctx: JobContext):
-    setup_langfuse()  # set up the langfuse tracer
+    # Optional: set up langfuse tracer if credentials are configured
+    if os.getenv("LANGFUSE_PUBLIC_KEY") and os.getenv("LANGFUSE_SECRET_KEY") and os.getenv("LANGFUSE_HOST"):
+        try:
+            setup_langfuse()
+            logger.info("Langfuse tracing enabled")
+        except Exception as e:
+            logger.warning(f"Failed to setup Langfuse: {e}. Continuing without tracing.")
+    else:
+        logger.info("Langfuse not configured, skipping telemetry setup")
 
     session = AgentSession()
     
