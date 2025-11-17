@@ -29,7 +29,7 @@ export const SessionView = ({
   const room = useRoomContext();
 
   useDebugMode({
-    enabled: process.env.NODE_END !== 'production',
+    enabled: process.env.NODE_ENV !== 'production',
   });
 
   useEffect(() => {
@@ -125,8 +125,8 @@ export const SessionView = ({
       inert={disabled}
       className="relative flex h-[100svh] min-h-svh flex-col overflow-hidden px-4 py-6 text-slate-900 sm:px-8 lg:px-12 dark:text-slate-100"
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-1 min-h-0 flex-col gap-6">
-        <section className="flex flex-1 min-h-0 flex-col overflow-hidden rounded-[2.75rem] border border-white/70 bg-white/80 p-6 shadow-[0_40px_140px_-80px_rgba(15,23,42,0.65)] ring-1 ring-black/5 backdrop-blur-xl transition-all sm:p-8 lg:p-10 dark:border-slate-700/60 dark:bg-slate-900/80 dark:ring-white/10">
+      <div className="mx-auto flex min-h-0 w-full max-w-6xl flex-1 flex-col gap-6">
+        <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[2.75rem] border border-white/70 bg-white/80 p-6 shadow-[0_40px_140px_-80px_rgba(15,23,42,0.65)] ring-1 ring-black/5 backdrop-blur-xl transition-all sm:p-8 lg:p-10 dark:border-slate-700/60 dark:bg-slate-900/80 dark:ring-white/10">
           <header className="flex flex-col gap-6 border-b border-slate-200/60 pb-6 lg:flex-row lg:items-center lg:justify-between dark:border-slate-700/60">
             <div className="flex flex-1 flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
               <div className="flex items-center gap-4">
@@ -178,7 +178,7 @@ export const SessionView = ({
             </div>
           </header>
 
-          <div className="mt-8 flex-1 min-h-0 overflow-hidden">
+          <div className="mt-8 min-h-0 flex-1 overflow-hidden">
             <MedicalNotes className="h-full min-h-0" />
           </div>
         </section>
