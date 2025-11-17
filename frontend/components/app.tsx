@@ -63,7 +63,7 @@ export function App({ appConfig }: AppProps) {
         }
 
         toastAlert({
-          title: "Une erreur est survenue lors de la connexion à l'agent",
+          title: "Une erreur est survenue lors de la connexion à l&apos;agent",
           description: `${error.name}: ${error.message}`,
         });
       });
@@ -90,7 +90,7 @@ export function App({ appConfig }: AppProps) {
 
       <RoomContext.Provider value={room}>
         <RoomAudioRenderer />
-        <StartAudio label="Démarrer l'audio" />
+        <StartAudio label="Démarrer l&apos;audio" />
         {/* --- */}
         <MotionSessionView
           key="session-view"

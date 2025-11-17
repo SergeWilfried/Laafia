@@ -14,5 +14,5 @@ export const APP_CONFIG_DEFAULTS: AppConfig = {
   accent: '#002cf2',
   logoDark: '/lk-logo-dark.svg',
   accentDark: '#1fd5f9',
-  startButtonText: "Démarrer l'appel",
+  startButtonText: "Démarrer l&apos;appel",
 };

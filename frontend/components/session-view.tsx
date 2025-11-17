@@ -38,8 +38,8 @@ export const SessionView = ({
         if (!isAgentAvailable(agentState)) {
           const reason =
             agentState === 'connecting'
-              ? "L'agent n'a pas rejoint la salle. "
-              : "L'agent s'est connecté mais n'a pas terminé l'initialisation. ";
+              ? "L&apos;agent n&apos;a pas rejoint la salle. "
+              : "L&apos;agent s&apos;est connecté mais n&apos;a pas terminé l&apos;initialisation. ";
 
           toastAlert({
             title: 'Session terminée',

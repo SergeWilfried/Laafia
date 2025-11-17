@@ -96,7 +96,7 @@ export function AgentControlBar({
 
   return (
     <div
-      aria-label="Contrôles de l'assistant vocal"
+      aria-label="Contrôles de l&apos;assistant vocal"
       className={cn(
         'bg-background border-bg2 dark:border-separator1 flex flex-col rounded-[31px] border p-3 drop-shadow-md/3',
         className
@@ -224,7 +224,7 @@ export function AgentControlBar({
             className="font-mono"
           >
             <PhoneDisconnectIcon weight="bold" />
-            <span className="hidden md:inline">TERMINER L'APPEL</span>
+            <span className="hidden md:inline">TERMINER L&apos;APPEL</span>
             <span className="inline md:hidden">FIN</span>
           </Button>
         )}

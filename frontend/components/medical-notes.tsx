@@ -308,7 +308,7 @@ export function MedicalNotes({ className }: MedicalNotesProps) {
         <div className="mt-5 space-y-5 text-xs text-slate-500 dark:text-slate-400">
           <div className="flex items-center gap-2">
             <span className="size-2 rounded-full bg-emerald-400" aria-hidden="true" />
-            Canal de l'agent LiveKit prêt
+            Canal de l&apos;agent LiveKit prêt
           </div>
           <div className="flex items-center gap-2">
             <span className="size-2 rounded-full bg-slate-400" aria-hidden="true" />
