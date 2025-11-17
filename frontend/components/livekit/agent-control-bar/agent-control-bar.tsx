@@ -96,7 +96,7 @@ export function AgentControlBar({
 
   return (
     <div
-      aria-label="Contrôles de l&apos;assistant vocal"
+      aria-label="Contrôles de l'assistant vocal"
       className={cn(
         'bg-background border-bg2 dark:border-separator1 flex flex-col rounded-[31px] border p-3 drop-shadow-md/3',
         className
